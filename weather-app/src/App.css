@@ -1,0 +1,52 @@
+.navbar {
+   line-height: 1.5;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  position: sticky;
+   top: 0;
+   padding: 1rem 0.5rem;
+   z-index: 100;
+   color: var(--primary-white);
+   background-color: var(--secondary-orange);
+}
+.map-container { 
+   display:  flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top : 3.2rem;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+}
+.flex-wrapper {
+   display: flex;
+   flex-direction : row;
+   flex-wrap: nowrap;
+   gap : 0.5rem;
+}
+.table {
+   margin: 0;
+   padding: 0;
+   border: none;
+}
+.table--heading{
+   background-color: var(--primary-orange);
+   font-size: 1rem;
+   text-align: center;
+   padding: 1rem;
+}
+.table--body {
+   padding: 1rem;
+}
+.parameter-name {
+   text-transform: capitalize;
+   font-weight: 500;
+   font-size: 0.8rem;
+   
+}
+.parameter-value {
+   font-weight: 750;
+}
