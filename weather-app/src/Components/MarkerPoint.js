@@ -4,18 +4,35 @@ export function MarkerPoint({ cityData }) {
   return (
     <Marker position={position}>
       <Popup>
-        <section className="flex-wrapper">
-          <h4>{cityData.name}</h4>
-          <article className="weather-container">
-            <ul>
-              <li>{cityData.main.temp}</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </article>
-        </section>
+        <table className="table">
+          <thead className="table--heading">
+            <tr>
+              <th colSpan={2} className="">
+                {cityData.name}
+              </th>
+            </tr>
+          </thead>
+          <tbody className="table--body">
+            <tr>
+              <td className="parameter-name">Temp</td>
+              <td className="parameter-value">{cityData.main.temp}</td>
+            </tr>{" "}
+            <tr>
+              <td className="parameter-name">Main</td>
+              <td className="parameter-value">{cityData.weather[0].main}</td>
+            </tr>{" "}
+            <tr>
+              <td className="parameter-name">[Lat,Lon]</td>
+              <td className="parameter-value">
+                {cityData.coord.lat},{cityData.coord.lon}
+              </td>
+            </tr>{" "}
+            <tr>
+              <td className="parameter-name">Country</td>
+              <td className="parameter-value">{cityData.sys.country}</td>
+            </tr>
+          </tbody>
+        </table>
       </Popup>
     </Marker>
   );

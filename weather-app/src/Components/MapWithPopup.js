@@ -1,4 +1,4 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { MarkerPoint } from "./MarkerPoint";
 
 export function MapWithPopup({ weatherInfo }) {
@@ -26,41 +26,6 @@ export function MapWithPopup({ weatherInfo }) {
               />
             );
           })}
-        <Marker position={[17.385, 78.4867]}>
-          <Popup>
-            <table className="table">
-              <thead className="table--heading">
-                <tr>
-                  <th colSpan={2} className="">
-                    Hyderabad
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="table--body">
-                <tr>
-                  <td className="parameter-name">Country</td>
-                  <td className="parameter-value">IN</td>
-                </tr>
-                <tr>
-                  <td className="parameter-name">Temp</td>
-                  <td className="parameter-value">28.2</td>
-                </tr>{" "}
-                <tr>
-                  <td className="parameter-name">Clouds</td>
-                  <td className="parameter-value">IN</td>
-                </tr>{" "}
-                <tr>
-                  <td className="parameter-name">Country</td>
-                  <td className="parameter-value">IN</td>
-                </tr>{" "}
-                <tr>
-                  <td className="parameter-name">Country</td>
-                  <td className="parameter-value">IN</td>
-                </tr>
-              </tbody>
-            </table>
-          </Popup>
-        </Marker>
       </MapContainer>
     </div>
   );

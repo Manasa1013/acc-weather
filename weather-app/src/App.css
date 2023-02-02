@@ -33,7 +33,7 @@
    border: none;
 }
 .table--heading{
-   background-color: var(--primary-orange);
+   color: var(--primary-orange);
    font-size: 1rem;
    text-align: center;
    padding: 1rem;

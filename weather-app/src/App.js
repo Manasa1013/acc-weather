@@ -7,8 +7,8 @@ import { Navbar } from "./Components/Navbar";
 function App() {
   const [weatherInfo, setWeatherInfo] = useState([]);
   //gets weather info from backend
-  async function fetchWeatherData() {
-    return fetch(`${URL}?page=1&per_page=10`)
+  async function fetchWeatherData(pageNumber) {
+    return fetch(`${URL}?page=${pageNumber}&per_page=10`)
       .then((res) => {
         console.log(res);
         return res.json();
@@ -20,9 +20,10 @@ function App() {
       .catch((err) => console.error("error in fetching data"));
   }
   useEffect(() => {
-    let interval = setInterval(() => {
-      console.log("interval", interval);
-      fetchWeatherData();
+    const interval = setInterval(() => {
+      fetchWeatherData(1);
+      fetchWeatherData(2);
+      fetchWeatherData(3);
     }, 300000);
     return () => clearInterval(interval);
   }, []);
