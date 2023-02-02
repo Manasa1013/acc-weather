@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --primary-orange: #ea580c;
+  --secondary-orange: #fb923c;
+  --light-orange : #fed7aa;
+  --primary-white: #FFFFFF;
+  --secondary-white: #F9FAFB;
+}
+
+* {
+  box-sizing: border-box;
+  outline: var(--primary-green);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-green);
+  background-color: var(--secondary-white);
+  overflow: hidden;
+}
+
+
